@@ -50,7 +50,7 @@ class Radiobuttons extends Field
 		
 		$view->setTemplateMode($templateMode);
 		
-		if ($this->isFresh($element) ) :
+		if (!$value && $this->isFresh($element) ) :
 			foreach ($options as $key => $option) :
 				if (!empty($option['default'])) :
 					$value = $option['value'];
